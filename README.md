@@ -5,7 +5,11 @@
 NgxFeatGeneratorCLI is a simple CLI for generating Angular feature directory, inside an existing Angular application. Under the hood it uses the angular schematics to generate components, services, guard etc.
 
 ## Prerequisites
-You should install the Angular CLI globally.
+First, you should install the Angular CLI globally.
+
+```sh
+npm i -g @angular/cli
+```
 
 ## Installation
 ```sh
@@ -108,19 +112,19 @@ You 'll find below the json fields description :
 
 | Field   |      Type      |  Description |
 |----------|:-------------:|------:|
-| feature |  string | The name of the feature to generate |
-| projectPath |    string   | The location of the existing Angular project |
-| featurePath | string | The path of the feature inside the existing Angular project |
-| tree | TreeItem[] | TreeItem Array which describes the tree files of the desired feature
+| feature |  `string` | The name of the feature to generate |
+| projectPath | `string` | The location of the existing Angular project |
+| featurePath | `string` | The path of the feature inside the existing Angular project |
+| tree | `TreeItem[]` | TreeItem Array which describes the tree files of the desired feature
 
-Below we describe the TreeItem object :
+Below the description of the `TreeItem` object :
 
 | Field   |      Type      |  Description |
 |----------|:-------------:|------:|
-| type |  string | Angular CLI schematic type : 'component', 'module',  'interface', 'guard', 'enum', 'service'. A special type has been added for our needs : 'spec'. It allows us to update the default Angular test to make isolated-test.|
-| name |  string | the path of the generated item. |
-| opts? |  string | Angular CLI options. ex: --changeDetection=OnPush --module=broadcast/broadcast.module.ts |
-| extra? |  ExtraConfig | Extra config for our needs for isolated test generation |
+| type |  `string` | Angular CLI schematic type : 'component', 'module',  'interface', 'guard', 'enum', 'service'. A special type has been added for our needs : 'spec'. It allows us to update the default Angular test to make isolated-test.|
+| name |  `string` | the path of the generated item. |
+| opts? |  `string` | Angular CLI options. ex: --changeDetection=OnPush --module=broadcast/broadcast.module.ts |
+| extra? |  `ExtraConfig` | Extra config for our needs for isolated test generation |
 
 Finally, run the generation command :
 
