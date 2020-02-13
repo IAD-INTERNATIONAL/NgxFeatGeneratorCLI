@@ -1,0 +1,209 @@
+{
+  "feature": "broadcast",
+  "projectPath": "test/project",
+  "featurePath": "src/app/broadcast",
+  "tree": [
+    {
+      "type": "module",
+      "name": "broadcast",
+      "opts": "--routing=true"
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/real-estate-card",
+      "opts": "--changeDetection=OnPush --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-information-dialog",
+      "opts": "--changeDetection=OnPush --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-card",
+      "opts": "--changeDetection=OnPush --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-pack",
+      "opts": "--changeDetection=OnPush --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-portal-item",
+      "opts": "--changeDetection=OnPush --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-history-overlay",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-pack-overlay",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-portal-overlay",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-statistics-overlay",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/broadcast-synthesis-overlay",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/shopping-cart",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/components/shopping-cart-item",
+      "opts": "--changeDetection=OnPush --entryComponent=true --module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "component",
+      "name": "broadcast/pages/broadcast-home",
+      "opts": "--module=broadcast/broadcast.module.ts",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "guard",
+      "name": "broadcast/shared/guard/elysium-guard",
+      "opts": "--implements=CanActivate",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/broadcast"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/broadcast-history"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/project"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/pack"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/portal-group"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/broadcast-statistics"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/shopping-cart"
+    },
+    {
+      "type": "interface",
+      "name": "broadcast/shared/models/cart-item"
+    },
+    {
+      "type": "enum",
+      "name": "broadcast/shared/models/cart-item-type"
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/broadcast",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/pack",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/portal-group",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/shopping-cart",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/action-history",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/broadcast-statistics",
+      "extra": {
+        "isolatedTest": true
+      }
+    },
+    {
+      "type": "service",
+      "name": "broadcast/shared/services/broadcast-history",
+      "extra": {
+        "isolatedTest": true
+      }
+    }
+  ]
+}
