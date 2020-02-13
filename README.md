@@ -1,4 +1,4 @@
-# NgxFeatGeneratorCLI
+# :rocket: NgxFeatGeneratorCLI
 
 > CLI for generating Angular feature from a json config input file.
 
@@ -131,3 +131,6 @@ Finally, run the generation command :
 ```sh
 ngx-feat-generator --file-config ./test/broadcast.json
 ```
+# License
+
+[ISC](LICENSE)
