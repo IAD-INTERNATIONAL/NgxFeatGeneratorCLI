@@ -1,6 +1,6 @@
 {
   "name": "ngx-feat-generator-cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "ngx script to generate feature from a json config input file",
   "main": "./lib/index.js",
   "bin": {
@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts --file-config ./test/broadcast.json",
-    "build": "tsc -p .",
+    "build": "run-s build:*",
+    "build:ts": "tsc -p .",
+    "build:tpl": "cp -R ./templates ./lib",
     "global": "npm i -g",
     "test:integration": "run-s clean:integration build global test:integration:start",
     "test:integration:start": "ngx-feat-generator --file-config ./test/broadcast.json",
