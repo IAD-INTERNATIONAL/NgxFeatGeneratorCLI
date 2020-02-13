@@ -1,6 +1,6 @@
 {
-  "name": "ngx-feat-generator-script",
-  "version": "1.0.0",
+  "name": "ngx-feat-generator-cli",
+  "version": "0.0.1",
   "description": "ngx script to generate feature from a json config input file",
   "main": "./lib/index.js",
   "bin": {

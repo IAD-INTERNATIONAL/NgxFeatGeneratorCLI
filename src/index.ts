@@ -15,13 +15,13 @@ console.log(chalk.green(figlet.textSync('ngx-feat-gen-cli', { horizontalLayout: 
 
 program
   .version('0.0.1')
-  .description('Ngx script to generate Angular feature from a json config input file')
+  .description('Ngx CLI for generating Angular feature directory from a json config input file')
   .option('-f, --file-config <type>', 'JSON input config file', (value: string) => JSON.parse(fs.readFileSync(value).toString()))
   .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
+} else {
+  const builder = new CommandBuilder(program.fileConfig);
+  builder.build().forEach((command: AbstractCommand) => command.execute());
 }
-
-const builder = new CommandBuilder(program.fileConfig);
-builder.build().forEach((command: AbstractCommand) => command.execute());
