@@ -12,7 +12,7 @@ export class NgCommand extends AbstractCommand {
    */
   execute(): void {
     const command = `cd ${this.config.projectPath} && ng g ${this.config.treeItem.type} ${this.config.treeItem.name} ${this.config.treeItem
-      .opts ?? ''}`;
+      .opts ?? ''}`.trim();
     execSync(command, { stdio: 'inherit' });
   }
 }

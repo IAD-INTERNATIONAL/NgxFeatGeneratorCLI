@@ -1,6 +1,6 @@
 {
   "feature": "broadcast",
-  "projectPath": "test/project",
+  "projectPath": "test/fake-ng-project",
   "featurePath": "src/app/broadcast",
   "tree": [
     {

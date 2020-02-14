@@ -131,6 +131,21 @@ Finally, run the generation command :
 ```sh
 ngx-feat-generator --file-config ./test/broadcast.json
 ```
+
+# Contributing
+
+If you want to contribute, you could setup the project in your local machine, with a standard git clone :
+
+```sh
+git clone git@github.com:IAD-INTERNATIONAL/NgxFeatGeneratorCLI.git
+```
+
+Next you must generate the fake ng project in `./test/fake-ng-project`: 
+
+```sh
+npm run setup:fake-project
+```
+
 # License
 
 [ISC](LICENSE)
