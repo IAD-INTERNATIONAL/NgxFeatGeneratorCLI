@@ -148,6 +148,22 @@ Next you must generate the fake ng project in `./test/fake-ng-project`:
 npm run setup:fake-project
 ```
 
+To run the integration test :
+
+```sh
+npm run test:integration
+```
+
+To run the Jest test :
+
+```sh
+npm test
+
+or
+
+npm run test:watch
+```
+
 # License
 
 [ISC](LICENSE)
