@@ -1,5 +1,7 @@
 # :rocket: NgxFeatGeneratorCLI
 
+![Node.js CI](https://github.com/IAD-INTERNATIONAL/NgxFeatGeneratorCLI/workflows/Node.js%20CI/badge.svg?branch=master)
+
 > CLI for generating Angular feature from a json config input file.
 
 NgxFeatGeneratorCLI is a simple CLI for generating Angular feature directory, inside an existing Angular application. Under the hood it uses the angular schematics to generate components, services, guard etc.
