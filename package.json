@@ -19,7 +19,7 @@
     "setup:fake-project": "npx ng new fake-ng-project --directory=./test/fake-ng-project --routing=true --style=scss && rm -rf ./test/fake-ng-project/.git && rm ./test/fake-ng-project/.gitignore",
     "clean": "run-s clean:*",
     "clean:lib": "rm -rf ./lib",
-    "clean:integration": "rm -rf ./test/project/src/app/broadcast",
+    "clean:integration": "rm -rf ./test/fake-ng-project/src/app/broadcast",
     "reinstall": "rm -rf ./node_modules ./package-lock.json && npm install",
     "publish": "run-s build npm:publish",
     "npm:publish": "npm publish"

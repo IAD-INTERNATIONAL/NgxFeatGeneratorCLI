@@ -41,7 +41,7 @@ Below an example json config file :
 ```javascript
 {
   "feature": "broadcast",
-  "projectPath": "test/project",
+  "projectPath": "test/fake-ng-project",
   "featurePath": "src/app/broadcast",
   "tree": [
     {

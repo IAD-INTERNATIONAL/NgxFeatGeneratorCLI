@@ -7,7 +7,7 @@ describe('CommandBuilder', () => {
     it('should build an array of 2 ngCommands', () => {
       builder = new CommandBuilder({
         feature: 'broadcast',
-        projectPath: 'test/project',
+        projectPath: 'test/fake-ng-project',
         tree: [
           {
             type: 'module',
@@ -30,7 +30,7 @@ describe('CommandBuilder', () => {
     it('should build an array of 2 ngCommands & 1 isolated test command', () => {
       builder = new CommandBuilder({
         feature: 'broadcast',
-        projectPath: 'test/project',
+        projectPath: 'test/fake-ng-project',
         tree: [
           {
             type: 'module',

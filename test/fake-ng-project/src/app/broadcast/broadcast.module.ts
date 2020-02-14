@@ -15,10 +15,11 @@ import { BroadcastSynthesisOverlayComponent } from './components/broadcast-synth
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopping-cart-item.component';
 import { BroadcastHomeComponent } from './pages/broadcast-home/broadcast-home.component';
+import { BroadcastComponent } from './service/broadcast/broadcast.component';
 
 
 @NgModule({
-  declarations: [RealEstateCardComponent, BroadcastInformationDialogComponent, BroadcastCardComponent, BroadcastPackComponent, BroadcastPortalItemComponent, BroadcastHistoryOverlayComponent, BroadcastPackOverlayComponent, BroadcastPortalOverlayComponent, BroadcastStatisticsOverlayComponent, BroadcastSynthesisOverlayComponent, ShoppingCartComponent, ShoppingCartItemComponent, BroadcastHomeComponent],
+  declarations: [RealEstateCardComponent, BroadcastInformationDialogComponent, BroadcastCardComponent, BroadcastPackComponent, BroadcastPortalItemComponent, BroadcastHistoryOverlayComponent, BroadcastPackOverlayComponent, BroadcastPortalOverlayComponent, BroadcastStatisticsOverlayComponent, BroadcastSynthesisOverlayComponent, ShoppingCartComponent, ShoppingCartItemComponent, BroadcastHomeComponent, BroadcastComponent],
   imports: [
     CommonModule,
     BroadcastRoutingModule

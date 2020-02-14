@@ -6,7 +6,7 @@ describe('CommandUtil', () => {
   beforeEach(
     () =>
       (commandUtil = new CommandUtil({
-        projectPath: 'test/project',
+        projectPath: 'test/fake-ng-project',
         treeItem: { type: 'service', name: 'broadcast/components/real-estate-card' }
       }))
   );
