@@ -6,7 +6,7 @@
 
 NgxFeatGeneratorCLI is a simple CLI for generating Angular feature directory, inside an existing Angular application. Under the hood it uses the angular schematics to generate components, services, guard etc.
 
-![Alt Text](./images/tty.gif)
+![Alt Text](./images/ngx-feat-gen-demo.gif)
 
 ## Prerequisites
 First, you should install the Angular CLI globally.
