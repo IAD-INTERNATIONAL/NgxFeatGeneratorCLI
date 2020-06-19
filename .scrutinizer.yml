@@ -1,0 +1,390 @@
+build:
+  nodes:
+    nodejs:
+      project_setup:
+        override: true
+
+      environment:
+        node: v10.15.1
+
+      tests:
+        override:
+          - js-scrutinizer-run  --enable-security-analysis
+
+filter:
+  paths: ["./src/*"]
+  excluded_paths:
+    - "./lib/*"
+  dependency_paths:
+    - "./node_modules/*"
+
+checks:
+    javascript:
+        # Check to flag variables that may not be initalized in all cases.
+        var_sometimes_initialized: true
+        # Check to flag variables that are never initialized.
+        var_never_initialized: true
+        # Ensures that the results of typeof are compared against a valid string.
+        valid_typeof: true
+        # Check to flag comparisons to the value `NaN`.
+        use_isnan: true
+        # Check to flag comparisons to undefined that may be unsafe.
+        unsafe_undefined: true
+        # Checks whether a function inside a loop accesses variables mutated between iterations.
+        unsafe_mutable_variable_usage: true
+        # Checks your package.json against known security vulnerabilities.
+        nsp_vulnerabilities: true
+        # Check to flag use of with statement.
+        no_with: true
+        # Check to disallow use of void operator.
+        no_void: true
+        # Check to flag for the usage of var suggesting to use `let` or `const`.
+        no_var: true
+        # Check to flag use of variables before they are defined.
+        no_use_before_define: true
+        # Check to flag declared but unused variables.
+        no_unused_vars: true
+        # Check to flag declared but unused functions.
+        no_unused_function: true
+        # Flag expressions in statement position that do not side effect.
+        no_unused_expressions: true
+        # Check to flag declared but unused constants.
+        no_unused_const: true
+        # Check to flag assignments that are superseded in all possible execution paths.
+        no_unused_assignment: true
+        # Checks for unreachable code due to return, throws, break, and continue.
+        no_unreachable: true
+        # Check to flag when initializing to undefined.
+        no_undef_init: true
+        # Check to flag references to undeclared variables.
+        no_undef: true
+        # Disallow sparse arrays.
+        no_sparse_arrays: true
+        # Check to flag overwriting built-in types.
+        no_shadow_builtins: true
+        # Check to flag use of comma operator.
+        no_sequences: true
+        # Check to flag when return statement contains assignment.
+        no_return_assign: true
+        # Check to flag constants that were declared multiple times.
+        no_redeclared_const: true
+        # Check to flag when the same variable is declared more then once.
+        no_redeclare: true
+        # Disallow the use of process.exit().
+        no_process_exit: true
+        # Disallow string concatenation when using `__dirname` and `__filename`.
+        no_path_concat: true
+        # Check to flag assignment of a function parameter.
+        no_param_assign: true
+        # Check to flag when using constructor for wrapper objects.
+        no_new_wrappers: true
+        # Check to disallow use of new operator with the `require` function.
+        no_new_require: true
+        # Check to flag when using new Function.
+        no_new_func: true
+        # A rule to disallow negated left operands of the `in` operator.
+        no_negated_in_lhs: true
+        # Check to flag when re-assigning native objects.
+        no_native_reassign: true
+        # Check to flag assignment to a loop variable.
+        no_loop_var_assign: true
+        # Check to flag labels that are the same as an identifier.
+        no_label_var: true
+        # Validate strings passed to the RegExp constructor.
+        no_invalid_regexp: true
+        # Check that function declarations are in correct scopes.
+        no_inner_declarations: true
+        # Check to flag use of implied eval via setTimeout and setInterval.
+        no_implied_eval: true
+        # Check to flag if `undefined` is returned implicitly.
+        no_implicit_undefined_return: true
+        # Check to flag use of function declaration identifiers as variables.
+        no_func_assign: true
+        # Check to flag unnecessary bind calls.
+        no_extra_bind: true
+        # Check to flag adding properties to native object's prototypes.
+        no_extend_native: true
+        # Check to flag assignment of the exception parameter.
+        no_ex_assign: true
+        # Check to flag use of eval() statement.
+        no_eval: true
+        # Check to flag when label is not used for a loop or switch.
+        no_empty_label: true
+        # Check to flag the use of empty character classes in regular expressions.
+        no_empty_class: true
+        # Check to flag use of an empty block statement.
+        no_empty: true
+        # Check for unnecessary `else` clauses after an `if`.
+        no_else_return: true
+        # Check to flag use of duplicate keys in an object.
+        no_dupe_keys: true
+        # Check to flag when deleting variables.
+        no_delete_var: true
+        # Checks your code for forgotten debug code.
+        no_debugger: true
+        # Check to flag use constant conditions.
+        no_constant_condition: true
+        # Check to flag use of console object.
+        no_console: true
+        # Check to flag trailing commas in object literals.
+        no_comma_dangle: true
+        # Check to flag use of arguments.callee and arguments.caller.
+        no_caller: true
+        # Check to flag `bitwise` operators.
+        no_bitwise: true
+        # Disallow construction of dense arrays using the Array constructor.
+        no_array_constructor: true
+        # Check to flag when aliasing native objects.
+        no_alias_builtins: true
+        # Check to require `constructors` to start with a capital letter.
+        new_cap: true
+        # Checks whether parameters referred to in JSDoc actually exist in the code.
+        jsdoc_non_existent_params: true
+        # Checks that parameters in JSDoc are not documented twice.
+        jsdoc_no_duplicate_params: true
+        # Check to flag for-in loops without if statements inside.
+        guard_for_in: true
+        # Check to flag statements that use `!=` and `==` instead of `!==` and `===`.
+        eqeqeq: true
+        # Enables duplicate/similar code detection for Javascript.
+        duplicate_code: true
+        # Check to flag statements without curly braces.
+        curly: true
+        # Check to flag consistent return values.
+        consistent_return: true
+        # Enables code rating for Javascript code.
+        code_rating: true
+        # Check to flag unused parameters.
+        check_unused_parameters: true
+        # Check to flag creation of objects which are immediately discarded.
+        check_unused_object_creation: true
+        # Check to flag calls to object members where the return value is discarded.
+        check_unused_member_calls: true
+        # Check to flag return which have no effect.
+        check_unnecessary_return: true
+        # Check to flag continue which have no effect.
+        check_unnecessary_continue: true
+        # Check try statements.
+        check_try_statement: true
+        # Check to flag if functions are called with too many arguments.
+        check_too_many_arguments: true
+        # Check to flag switch statements with no default case.
+        check_switch_no_default: true
+        # Check to flag switch statements with no cases.
+        check_switch_default_only: true
+        # Check to flag switch statements where the default case is not listed last.
+        check_switch_default_not_last: true
+        # Check to flag switch statements where cases may overlap.
+        check_switch_ambiguous_test: true
+        # Check to flag disembodied loops.
+        check_loop_no_body: true
+        # Check to flag for loops where loop variables are initialized but not used in the test.
+        check_for_loops_test: true
+
+build_failure_conditions:
+    - 'elements.rating(<= F).exists' # No classes/methods with a rating of D or worse
+    - 'elements.rating(<= D).new.exists' # No new classes/methods with a rating of D or worse
+    - 'issues.label("coding-style").new.exists' # No new coding style issues allowed
+    - 'issues.label("coding-style").new.count > 5' # More than 5 new coding style issues
+    - 'issues.severity(>= MAJOR).new.exists' # New issues of major or higher severity (available options : CRITICAL, MAJOR, MINOR, INFO)
+    - 'project.metric("scrutinizer.quality", < 7)' # Code Quality Rating drops below 7
+#    - 'project.metric_change("scrutinizer.test_coverage", < -0.005)' # Code Coverage decreased by more than 0.5%
+#    - 'project.metric("scrutinizer.test_coverage", < 0.70)' # Code Coverage drops below 70%
+
+build:
+    nodes:
+      nodejs:
+        project_setup:
+          override: true
+  
+        environment:
+          node: v10.15.1
+
+        tests:
+          override:
+            - js-scrutinizer-run  --enable-security-analysis
+  
+filter:
+  paths: ['./src/*']
+  excluded_paths:
+    - './lib/*'    
+  dependency_paths:
+    - './node_modules/*'
+  
+# checks
+checks:
+  javascript:
+    # Check to flag variables that may not be initalized in all cases.
+    var_sometimes_initialized: true
+    # Check to flag variables that are never initialized.
+    var_never_initialized: true
+    # Ensures that the results of typeof are compared against a valid string.
+    valid_typeof: true
+    # Check to flag comparisons to the value `NaN`.
+    use_isnan: true
+    # Check to flag comparisons to undefined that may be unsafe.
+    unsafe_undefined: true
+    # Checks whether a function inside a loop accesses variables mutated between iterations.
+    unsafe_mutable_variable_usage: true
+    # Checks your package.json against known security vulnerabilities.
+    nsp_vulnerabilities: true
+    # Check to flag use of with statement.
+    no_with: true
+    # Check to disallow use of void operator.
+    no_void: true
+    # Check to flag for the usage of var suggesting to use `let` or `const`.
+    no_var: true
+    # Check to flag use of variables before they are defined.
+    no_use_before_define: true
+    # Check to flag declared but unused variables.
+    no_unused_vars: true
+    # Check to flag declared but unused functions.
+    no_unused_function: true
+    # Flag expressions in statement position that do not side effect.
+    no_unused_expressions: true
+    # Check to flag declared but unused constants.
+    no_unused_const: true
+    # Check to flag assignments that are superseded in all possible execution paths.
+    no_unused_assignment: true
+    # Checks for unreachable code due to return, throws, break, and continue.
+    no_unreachable: true
+    # Check to flag when initializing to undefined.
+    no_undef_init: true
+    # Check to flag references to undeclared variables.
+    no_undef: true
+    # Disallow sparse arrays.
+    no_sparse_arrays: true
+    # Check to flag overwriting built-in types.
+    no_shadow_builtins: true
+    # Check to flag use of comma operator.
+    no_sequences: true
+    # Check to flag when return statement contains assignment.
+    no_return_assign: true
+    # Check to flag constants that were declared multiple times.
+    no_redeclared_const: true
+    # Check to flag when the same variable is declared more then once.
+    no_redeclare: true
+    # Disallow the use of process.exit().
+    no_process_exit: true
+    # Disallow string concatenation when using `__dirname` and `__filename`.
+    no_path_concat: true
+    # Check to flag assignment of a function parameter.
+    no_param_assign: true
+    # Check to flag when using constructor for wrapper objects.
+    no_new_wrappers: true
+    # Check to disallow use of new operator with the `require` function.
+    no_new_require: true
+    # Check to flag when using new Function.
+    no_new_func: true
+    # A rule to disallow negated left operands of the `in` operator.
+    no_negated_in_lhs: true
+    # Check to flag when re-assigning native objects.
+    no_native_reassign: true
+    # Check to flag assignment to a loop variable.
+    no_loop_var_assign: true
+    # Check to flag labels that are the same as an identifier.
+    no_label_var: true
+    # Validate strings passed to the RegExp constructor.
+    no_invalid_regexp: true
+    # Check that function declarations are in correct scopes.
+    no_inner_declarations: true
+    # Check to flag use of implied eval via setTimeout and setInterval.
+    no_implied_eval: true
+    # Check to flag if `undefined` is returned implicitly.
+    no_implicit_undefined_return: true
+    # Check to flag use of function declaration identifiers as variables.
+    no_func_assign: true
+    # Check to flag unnecessary bind calls.
+    no_extra_bind: true
+    # Check to flag adding properties to native object's prototypes.
+    no_extend_native: true
+    # Check to flag assignment of the exception parameter.
+    no_ex_assign: true
+    # Check to flag use of eval() statement.
+    no_eval: true
+    # Check to flag when label is not used for a loop or switch.
+    no_empty_label: true
+    # Check to flag the use of empty character classes in regular expressions.
+    no_empty_class: true
+    # Check to flag use of an empty block statement.
+    no_empty: true
+    # Check for unnecessary `else` clauses after an `if`.
+    no_else_return: true
+    # Check to flag use of duplicate keys in an object.
+    no_dupe_keys: true
+    # Check to flag when deleting variables.
+    no_delete_var: true
+    # Checks your code for forgotten debug code.
+    no_debugger: true
+    # Check to flag use constant conditions.
+    no_constant_condition: true
+    # Check to flag use of console object.
+    no_console: true
+    # Check to flag trailing commas in object literals.
+    no_comma_dangle: true
+    # Check to flag use of arguments.callee and arguments.caller.
+    no_caller: true
+    # Check to flag `bitwise` operators.
+    no_bitwise: true
+    # Disallow construction of dense arrays using the Array constructor.
+    no_array_constructor: true
+    # Check to flag when aliasing native objects.
+    no_alias_builtins: true
+    # Check to require `constructors` to start with a capital letter.
+    new_cap: true
+    # Checks whether parameters referred to in JSDoc actually exist in the code.
+    jsdoc_non_existent_params: true
+    # Checks that parameters in JSDoc are not documented twice.
+    jsdoc_no_duplicate_params: true
+    # Check to flag for-in loops without if statements inside.
+    guard_for_in: true
+    # Check to flag statements that use `!=` and `==` instead of `!==` and `===`.
+    eqeqeq: true
+    # Enables duplicate/similar code detection for Javascript.
+    duplicate_code: true
+    # Check to flag statements without curly braces.
+    curly: true
+    # Check to flag consistent return values.
+    consistent_return: true
+    # Enables code rating for Javascript code.
+    code_rating: true
+    # Check to flag unused parameters.
+    check_unused_parameters: true
+    # Check to flag creation of objects which are immediately discarded.
+    check_unused_object_creation: true
+    # Check to flag calls to object members where the return value is discarded.
+    check_unused_member_calls: true
+    # Check to flag return which have no effect.
+    check_unnecessary_return: true
+    # Check to flag continue which have no effect.
+    check_unnecessary_continue: true
+    # Check try statements.
+    check_try_statement: true
+    # Check to flag if functions are called with too many arguments.
+    check_too_many_arguments: true
+    # Check to flag switch statements with no default case.
+    check_switch_no_default: true
+    # Check to flag switch statements with no cases.
+    check_switch_default_only: true
+    # Check to flag switch statements where the default case is not listed last.
+    check_switch_default_not_last: true
+    # Check to flag switch statements where cases may overlap.
+    check_switch_ambiguous_test: true
+    # Check to flag disembodied loops.
+    check_loop_no_body: true
+    # Check to flag for loops where loop variables are initialized but not used in the test.
+    check_for_loops_test: true
+  
+# Project Coding style (https://scrutinizer-ci.com/docs/configuration/coding_style)
+coding_style:
+
+build_failure_conditions:
+  - 'elements.rating(<= F).exists' # No classes/methods with a rating of D or worse
+  - 'elements.rating(<= D).new.exists' # No new classes/methods with a rating of D or worse
+  - 'issues.label("coding-style").new.exists' # No new coding style issues allowed
+  - 'issues.label("coding-style").new.count > 5' # More than 5 new coding style issues
+  - 'issues.severity(>= MAJOR).new.exists' # New issues of major or higher severity (available options : CRITICAL, MAJOR, MINOR, INFO)
+  - 'project.metric("scrutinizer.quality", < 7)' # Code Quality Rating drops below 7
+#    - 'project.metric_change("scrutinizer.test_coverage", < -0.005)' # Code Coverage decreased by more than 0.5%
+#    - 'project.metric("scrutinizer.test_coverage", < 0.70)' # Code Coverage drops below 70%
+  
